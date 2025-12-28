@@ -1,0 +1,21 @@
+[project]
+name = "stacks-credentials"
+description = "Blockchain-powered credential verification system"
+authors = ["serayd61"]
+telemetry = false
+cache_dir = "./.cache"
+
+[contracts.credential-nft]
+path = "contracts/credential-nft.clar"
+clarity_version = 2
+epoch = 2.5
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
+
